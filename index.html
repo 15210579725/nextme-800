@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" data-theme="cinema">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Explore selected moments from NextMe-800, a longitudinal egocentric dataset for individual behavior prediction.">
+  <title>NextMe-800 — Life, unfolding.</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%23d2b58a'/%3E%3Ctext x='20' y='29' text-anchor='middle' font-family='Georgia' font-size='29' fill='white'%3EN%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="#">NextMe<span>-800</span></a><nav><a href="#atlas">Explore</a></nav></header>
+  <main>
+    <section class="intro" aria-labelledby="title">
+      <div><p class="intro-kicker">A longitudinal egocentric dataset</p><h1 id="title">Life, unfolding.</h1></div>
+      <div class="intro-copy"><p>One person. The everyday and the unexpected.<br>Ultra-long video for understanding what comes next.</p><a href="#atlas" class="explore-link">Step into the moments <span aria-hidden="true">↓</span></a></div>
+    </section>
+    <section id="atlas" class="atlas-section" aria-label="Interactive monthly photo atlas">
+      <div class="atlas-toolbar"><div class="atlas-instruction"><span class="status-dot"></span><span>Hover to step closer <span class="desktop-only">· click to hold a moment</span></span></div><div class="controls"><button id="motion" aria-pressed="true">Pause motion</button><button id="sound" aria-pressed="false">Sound off</button><button id="language" aria-label="Change caption language">中文</button></div></div>
+      <div class="atlas-scroll"><div id="atlas-grid" class="atlas-grid"><div class="axis-line"></div><div class="center-mark" aria-hidden="true">NextMe-800</div></div></div>
+      <div class="atlas-footer"><span>April — August 2026</span><span>130 selected moments <span class="desktop-only">/ curated for diversity</span></span><span>64 video previews · 66 still photographs</span></div>
+      
+    </section>
+
+
+  </main>
+  
+  <div id="veil" class="veil"></div>
+  <article id="moment" class="moment" aria-label="Selected moment" hidden>
+    <div class="moment-media"><img id="moment-image" alt=""><video id="moment-video" playsinline loop muted hidden></video><div class="moment-top"><span id="moment-date"></span><button id="close" aria-label="Close moment">×</button></div><div class="progress"><span></span></div></div>
+    <div class="moment-description"><div class="moment-meta"><span id="category"></span><span id="pin-state">Click to keep open</span></div><h2 id="moment-title"></h2><p id="caption"></p><div class="moment-bottom"><span id="moment-time"></span><span id="audio-state"></span></div></div>
+  </article>
+  <div id="announcement" class="sr-only" role="status" aria-live="polite"></div>
+</body>
+</html>
